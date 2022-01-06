@@ -1,0 +1,37 @@
+.text{
+    text-align: center;
+    padding-top: 150px;
+}
+.choose{
+    padding-left: 800px;
+    padding-right: 800px;
+}
+.form{
+    width:600px;
+    height: 50px;
+    padding: 2em 0 2em 0;
+    border:solid 5px #F1F1F1;
+    margin-bottom: 0;
+    background-color: #AFC8DE;
+    margin-left: 650px;
+    margin-right: 800px;
+    margin-top: 20px;
+}
+.serch{
+    margin-left: 920px;
+    margin-right: 800px;
+    margin-top: 20px;
+}
+.b{
+    padding-bottom: 1000px;
+}
+.t1{
+    margin-left: 550px;
+    margin-right: 500px;  
+}
+.t2{
+    margin-left: 700px;
+}
+.karta{
+    margin-left: 500px;
+}
