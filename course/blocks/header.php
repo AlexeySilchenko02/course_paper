@@ -22,7 +22,7 @@
     <a class="nav-link" href="form.php">Форма обратной связи </a> 
   </li> 
   <li class="nav-item">
-    <a class="nav-link" href="contact.php">О нас </a> 
+    <a class="nav-link" href="contact.php">Контакты </a> 
   </li> 
 </ul>
 </header>

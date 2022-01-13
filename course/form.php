@@ -4,13 +4,13 @@
     require_once "blocks/header.php";
 
     ?>
-    <h1 class = "my-5"><?=$title?></h1>
+    <h1 class = "my-5 text-center"><?=$title?></h1>
 
 
     <div class="text-success"><?=$_SESSION['success_mail']?></div>
 
 
-    <form action="form_check.php" method="post">
+    <form class = "w-25 text-center container-fluid" action="form_check.php" method="post">
         <input type="text" name = "username" value = "<?=$_SESSION['username']?>" placeholder = "Введите имя" class = "form-control">
         <div class = "text-danger"><?=$_SESSION['error_username']?></div><br>
         <input type="email" name = "email" value = "<?=$_SESSION['email']?>" placeholder = "Введите email" class = "form-control">
