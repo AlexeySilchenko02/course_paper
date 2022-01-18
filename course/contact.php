@@ -1,8 +1,9 @@
 <?php
+    $title = "Контакты";
     require "blocks/header.php";
 ?>
 
-<div class="container mt-5">
+<div class="container mt-5 container-fluid">
   <div class="row justify-content-center">
     <div class="col-2">
     <img src="photo/photo.jpg" width="170" hight = "" alt="No photo">
@@ -13,6 +14,7 @@
     <p>Сильченко Алексей Евгеньевич</p>
     <p>Специальность: 09.03.03 Прикладная информатика</p>
     <p>Специализация: Корпоративные информационные системы</p>
+  
     </div>
   </div>
 
@@ -24,7 +26,7 @@
 
   
 
-  <div class = "container mt-3 container-fluid">
+  <div class = "container mt-3">
       <p>Моя электронная почта: <a href="mailto: silchenko.a.e@gmail.com">silchenko.a.e@gmail.com</a> </p>
       <p>Файлы сайта: <a href="https://github.com/AlexeySilchenko02/course_paper.git"> GitHub</a> </p>
       

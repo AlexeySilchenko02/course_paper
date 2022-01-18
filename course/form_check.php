@@ -48,7 +48,8 @@ else if (strlen($message) <= 15){
 else {
     $subject = "=?utf-8?B".base64_encode($subject)."?=";
     $headers = "From:\r\nReply-to: $form\r\nContent-type:text/plain; charset=utf-8\r\n";
-   mail("silchenko.a.e@mail.ru", $subject, $message, $headers );
-   $_SESSION['success_mail'] = "Вы успешно отправили письмо!";
+    mail("silchenko.a.e@mail.ru", $subject, $message, $headers );
+    $_SESSION['success_mail'] = "Вы успешно отправили письмо!";
+    
    redirect();
 }
