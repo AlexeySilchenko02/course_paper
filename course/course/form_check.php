@@ -53,13 +53,17 @@ else {
     mail("silchenko.a.e@mail.ru", $subject, $message, $headers );
     $_SESSION['success_mail'] = "Вы успешно отправили письмо!";
 
-    mysqli_query($connect, "INSERT INTO form (username, email, subject, message) VALUES (
-        \"".$_POST["username"]."\", 
-        \"".$_POST["email"]."\",
-        \"".$_POST["subject"]."\",
-        \"".$_POST["message"]."\"
-        )"
+    //$result = mysqli_query($connect, "SELECT * FROM form WHERE username=\"".$_POST['username']."\"");
+    //echo mysqli_num_rows($result);
+    //if(mysqli_num_rows($result) == 0){
+        mysqli_query($connect, "INSERT INTO form (username, email, subject, message) VALUES (
+            \"".$_POST["username"]."\", 
+            \"".$_POST["email"]."\",
+            \"".$_POST["subject"]."\",
+            \"".$_POST["message"]."\"
+            )"
         );
+    //}
     
    redirect();
 }

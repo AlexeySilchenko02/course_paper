@@ -68,7 +68,7 @@ $content = "
     
     <div class = 'row'>
         <label>Логин</label>
-        <input class = 'justify-content-end' type=\"text\" name=\"login\" value = '".$_SESSION['login']."'>
+        <input class = 'justify-content-end' onkeyup='checkParams()' type=\"text\" name=\"login\" value = '".$_SESSION['login']."'>
     </div>
     
     <div class = 'row'>

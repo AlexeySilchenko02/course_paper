@@ -11,7 +11,7 @@
 
     <?php if(isset($session_user) && $session_user != ""):?> 
     <form class = "w-25 text-center container-fluid mt-2" action="form_check.php" method="post">
-        <input type="text" name = "username" value = "<?=$_SESSION['user']['name']?>" placeholder = "Введите ФИО" class = "form-control">
+        <input type="text" name = "username" value = "<?=$_SESSION['username']?>" placeholder = "Введите имя" class = "form-control">
         <div class = "text-danger"><?=$_SESSION['error_username']?></div><br>
         <input type="email" name = "email" value = "<?=$_SESSION['email']?>" placeholder = "Введите email" class = "form-control">
         <div class = "text-danger"><?=$_SESSION['error_email']?></div><br>
