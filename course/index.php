@@ -22,25 +22,62 @@
                 <?php endif;?>
     </div>
 
-     
-        <div class = "text-center container-fluid">
-            <h1>Поиск спортивных залов в вашем районе</h1>
-            <form action="gyms.php" method = "POST">
-                <input type="text" id="district" name = "district" placeholder = "Введите ваш район" class = "form-control w-50 p-3 container-fluid text-center mt-3"><br>
-                <input type="submit" value = "Отправить" class = "btn btn-success">
+    <?php if(isset($session_user) && $session_user != ""):?> 
+    <div class = "text-center container-fluid">
+        <h1>Поиск спортивных залов в вашем районе</h1>
+        <form action="gyms.php" method = "POST">
+            <input type="text" id="district" name = "district" placeholder = "Введите ваш район" class = "form-control w-50 p-3 container-fluid text-center mt-3"><br>
+            <input type="submit" value = "Отправить" class = "btn btn-success">
             </form>
+    </div>
+    <?php else:?>
+        <div class = "text-center container-fluid">
+        <h1>Поиск спортивных залов в вашем районе</h1>
+        <input type="text" id="district" name = "district" placeholder = "Введите ваш район" class = "form-control w-50 p-3 container-fluid text-center mt-3"><br>
+        <p class = " text-danger container-fluid text-center">Чтобы воспользоваться поиском, авторизуйтесь!</p>
         </div>
-    
-    
-    
-    <div class = " text-center  container-fluid  mt-3 align-items-center ">
+    <?php endif;?>
 
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4080f51afb42560591237d510872385140691ba7fd03e1a5e5d152cf1a27baa9&amp;width=600&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-    
-    <div >
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <img class="img-fluid" src="photo/gyms.jpg" alt="">
+                
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-html5" aria-hidden="true"></i>
+                <h4 class="pb-3">20 лучших фитнес клубов Москвы</h4>
+                <h5 class="pb-3"><a href = "top.php">Смотреть!</a></p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-css3" aria-hidden="true"></i>
+                <img class="img-fluid" src="photo/gyms1.jpg" alt="">
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <img class="img-fluid" src="photo/g2.jpg" alt="">
+                
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <img class="img-fluid mt-2" src="photo/g3.jpg" alt="">
+                
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <img class="img-fluid" src="photo/g4.jpg" alt="">
+                
+            </div>
         </div>
     </div>
-<?php
+</section>
 
-    require "blocks/footer.php";
-    ?>
+<footer class="footer">
+    <div class="copyright text-center border-top">
+        <p>Все права защищены &copy; 2022</p>
+        <p><?php echo date('d.m.Y H:i:s') . '<br>';?></p>
+        </div>
+</footer>
+</body>
+</html>

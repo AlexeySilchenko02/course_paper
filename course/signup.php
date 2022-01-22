@@ -1,12 +1,7 @@
-
 <?php
 require("connectdb.php");
 require "blocks/header.php";
 session_start();
-
-// unset($_SESSION['name']);
-// unset($_SESSION['login']);
-// unset($_SESSION['password']);
 
 $name = htmlspecialchars(trim($_POST['name']));
 $login = htmlspecialchars(trim($_POST['login']));
@@ -41,7 +36,6 @@ if (!empty($_POST)){
 
     else{
     $result = mysqli_query($connect, "SELECT * FROM users WHERE login=\"".$_POST['login']."\"");
-    //echo mysqli_num_rows($result);
     if(mysqli_num_rows($result) == 0){
         mysqli_query($connect, "INSERT INTO users (name, login, password) VALUES (
             \"".$_POST["name"]."\", 
@@ -50,8 +44,7 @@ if (!empty($_POST)){
             )"
         );
     }
-    //$id = mysqli_insert_id($connect);
-    header("Location: index.php"); // тут у тебя должен быть индекс
+    header("Location: index.php"); 
 }
 }
 
@@ -84,3 +77,6 @@ $content = "
 
 require  "blocks/footer.php";
 ?>
+<div class = "container-fluid">
+    <?=$content?>
+    </div>

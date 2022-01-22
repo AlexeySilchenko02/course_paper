@@ -34,6 +34,11 @@
 
 
 
-<?php
-    require "blocks/footer.php";
-?>
+  <footer id = "footer" class="footer h-20">
+    <div class="copyright text-center py-3 border-top">
+        <p>Все права защищены &copy; 2022</p>
+        <p><?php echo date('d.m.Y H:i:s') . '<br>';?></p>
+        </div>
+</footer>
+</body>
+</html>
