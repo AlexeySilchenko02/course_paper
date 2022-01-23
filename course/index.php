@@ -26,7 +26,8 @@
     <div class = "text-center container-fluid">
         <h1>Поиск спортивных залов в вашем районе</h1>
         <form action="gyms.php" method = "POST">
-            <input type="text" id="district" name = "district" placeholder = "Введите ваш район" class = "form-control w-50 p-3 container-fluid text-center mt-3"><br>
+            <input type="text" id="district" name = "district" placeholder = "Введите ваш район" class = "form-control w-50 p-3 container-fluid text-center mt-4"><br>
+            <div class = "text-danger"><?=$_SESSION['error_search']?></div><br>
             <input type="submit" value = "Отправить" class = "btn btn-success">
             </form>
     </div>
